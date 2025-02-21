@@ -26,7 +26,7 @@ const links = reactive([
 const icons = ref([hearth, cart, user])
 </script>
 <template>
-    <div
+    <nav
         class="w-full min-h-7 flex justify-around items-center border-b-2 border-b-[#B3B3B3] py-4 max-md:flex-col gap-3">
         <h1 class="text-2xl font-bold text-black max-lg:hidden">{{ title }}</h1>
         <ul class="flex justify-center items-center gap-12 max-md:gap-0 max-md:w-full max-md:justify-around">
@@ -53,5 +53,5 @@ const icons = ref([hearth, cart, user])
                 </li>
             </ul>
         </div>
-    </div>
+    </nav>
 </template>
