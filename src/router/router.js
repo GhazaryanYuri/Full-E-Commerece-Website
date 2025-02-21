@@ -17,7 +17,7 @@ const routes = [
     name: "Sign up",
     component: SignUP,
   },
-  { path: "/:catchAll(.*)", redirect: "/Full-E-Commerece-Website/home" },
+  { path: "/:catchAll(.*)", redirect: "/Full-E-Commerece-Website/" },
 ];
 
 const router = createRouter({
