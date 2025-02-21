@@ -8,19 +8,19 @@ const title = ref('Exclusive');
 const links = reactive([
     {
         linkName: 'Home',
-        link: '/home'
+        link: '/Full-E-Commerece-Website/home'
     },
     {
         linkName: 'Contact',
-        link: '/contact'
+        link: '/Full-E-Commerece-Website/contact'
     },
     {
         linkName: 'About',
-        link: '/about'
+        link: '/Full-E-Commerece-Website/about'
     },
     {
         linkName: 'Sign Up',
-        link: '/sign-up'
+        link: '/Full-E-Commerece-Website/sign-up'
     }
 ])
 const icons = ref([hearth, cart, user])

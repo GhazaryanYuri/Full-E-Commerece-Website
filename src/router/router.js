@@ -5,10 +5,19 @@ import About from "@/pages/About.vue";
 import SignUP from "@/pages/Sign-UP.vue";
 
 const routes = [
-  { path: "/home", name: "Home", component: Home },
-  { path: "/contact", name: "Contact", component: Contact },
-  { path: "/about", name: "About", component: About },
-  { path: "/sign-up", name: "Sign up", component: SignUP },
+  { path: "/Full-E-Commerece-Website/home", name: "Home", component: Home },
+  {
+    path: "/Full-E-Commerece-Website/contact",
+    name: "Contact",
+    component: Contact,
+  },
+  { path: "/Full-E-Commerece-Website/about", name: "About", component: About },
+  {
+    path: "/Full-E-Commerece-Website/sign-up",
+    name: "Sign up",
+    component: SignUP,
+  },
+  { path: "/:catchAll(.*)", redirect: "/Full-E-Commerece-Website/home" },
 ];
 
 const router = createRouter({
