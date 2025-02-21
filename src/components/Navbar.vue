@@ -1,11 +1,28 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, reactive } from 'vue';
 import hearth from '@/components/icons/hearth.svg';
 import cart from '@/components/icons/cart.svg';
 import user from '@/components/icons/user.svg';
 
 const title = ref('Exclusive');
-const links = ref(['Home', 'Contact', 'About', 'Sign Up']);
+const links = reactive([
+    {
+        linkName: 'Home',
+        link: '/home'
+    },
+    {
+        linkName: 'Contact',
+        link: '/contact'
+    },
+    {
+        linkName: 'About',
+        link: '/about'
+    },
+    {
+        linkName: 'Sign Up',
+        link: '/sign-up'
+    }
+])
 const icons = ref([hearth, cart, user])
 </script>
 <template>
@@ -14,7 +31,8 @@ const icons = ref([hearth, cart, user])
         <h1 class="text-2xl font-bold text-black max-lg:hidden">{{ title }}</h1>
         <ul class="flex justify-center items-center gap-12 max-md:gap-0 max-md:w-full max-md:justify-around">
             <li v-for="(link, index) in links" :key="index">
-                <a href="#" class="text-base font-normal hover:opacity-75">{{ link }}</a>
+                <RouterLink :to="link.link" class="text-base font-normal hover:opacity-75">{{ link.linkName }}
+                </RouterLink>
             </li>
         </ul>
         <div class="flex justify-center items-center gap-6 max-md:w-full max-md:justify-around">
